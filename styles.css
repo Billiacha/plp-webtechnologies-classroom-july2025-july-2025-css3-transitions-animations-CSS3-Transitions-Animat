@@ -1,0 +1,84 @@
+/* ===============================
+   General Styling
+   =============================== */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 50px;
+  background: #f0f8ff;
+}
+
+/* ===============================
+   Part 1: Button Hover Transition
+   =============================== */
+.btn-animate {
+  padding: 10px 20px;
+  background: turquoise;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  transition: transform 0.3s, background 0.3s; /* smooth hover */
+}
+.btn-animate:hover {
+  transform: scale(1.2);
+  background: darkcyan;
+}
+
+/* ===============================
+   Image Animation Example
+   =============================== */
+.image-container {
+  margin: 30px auto;
+}
+.animated-img {
+  width: 200px; /* Adjust size as needed */
+  border-radius: 12px;
+  transition: transform 0.5s ease;
+}
+.animated-img:hover {
+  transform: rotate(5deg) scale(1.1);
+}
+
+/* ===============================
+   Box Animation (triggered by JS)
+   =============================== */
+.box {
+  width: 100px;
+  height: 100px;
+  margin: 30px auto;
+  background: coral;
+  border-radius: 12px;
+  transition: transform 0.5s ease-in-out;
+}
+.box.animate {
+  animation: bounce 1s forwards;
+}
+@keyframes bounce {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-80px); }
+  100% { transform: translateY(0); }
+}
+
+/* ===============================
+   Modal Styling
+   =============================== */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+}
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  animation: fadeIn 0.5s;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
